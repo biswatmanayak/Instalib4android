@@ -1,3 +1,4 @@
+/*
 package dev.niekirk.com.instagram4android.requests.internal;
 
 import android.util.Log;
@@ -11,10 +12,14 @@ import java.io.FileInputStream;
 import java.io.IOException;
 
 import lombok.AllArgsConstructor;
+import okhttp3.Request;
+import okhttp3.RequestBody;
 
+*/
 /**
  * Created by root on 09/06/17.
- */
+ *//*
+
 
 @AllArgsConstructor
 public class InstagramUploadVideoJobRequest extends InstagramRequest<StatusResult> {
@@ -87,10 +92,11 @@ public class InstagramUploadVideoJobRequest extends InstagramRequest<StatusResul
         return (StatusResult)this.parseJson(statusCode, content, StatusResult.class);
     }
     
-    public UploadVideoJobRequest(String uploadId, String uploadUrl, String uploadJob, File videoFile) {
+    public void UploadVideoJobRequest(String uploadId, String uploadUrl, String uploadJob, File videoFile) {
         this.uploadId = uploadId;
         this.uploadUrl = uploadUrl;
         this.uploadJob = uploadJob;
         this.videoFile = videoFile;
     }
 }
+*/
