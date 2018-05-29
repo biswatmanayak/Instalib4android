@@ -10,7 +10,7 @@ import android.util.Log;
 import dev.niekirk.com.instagram4android.InstagramConstants;
 import dev.niekirk.com.instagram4android.requests.internal.InstagramConfigureVideoRequest;
 import dev.niekirk.com.instagram4android.requests.internal.InstagramExposeRequest;
-import dev.niekirk.com.instagram4android.requests.internal.InstagramUploadVideoJobRequest;
+
 import dev.niekirk.com.instagram4android.requests.payload.InstagramUploadVideoResult;
 import dev.niekirk.com.instagram4android.requests.payload.StatusResult;
 
@@ -73,12 +73,12 @@ public class InstagramUploadVideoRequest extends InstagramRequest<StatusResult> 
             String uploadUrl = firstPhaseResult.getVideo_upload_urls().get(3).get("url").toString();
             String uploadJob = firstPhaseResult.getVideo_upload_urls().get(3).get("job").toString();
 
-            StatusResult uploadJobResult = api.sendRequest(new InstagramUploadVideoJobRequest(uploadId, uploadUrl, uploadJob, videoFile));
-            Log.d("UPLOAD", "Upload result: " + uploadJobResult);
+            //StatusResult uploadJobResult = api.sendRequest(new InstagramUploadVideoJobRequest(uploadId, uploadUrl, uploadJob, videoFile));
+            //Log.d("UPLOAD", "Upload result: " + uploadJobResult);
 
-            if (!uploadJobResult.getStatus().equalsIgnoreCase("ok")) {
+           /* if (!uploadJobResult.getStatus().equalsIgnoreCase("ok")) {
                 throw new RuntimeException("Error happened in video upload submit job: " + uploadJobResult.getMessage());
-            }
+            }*/
 
 
             StatusResult thumbnailResult = configureThumbnail(uploadId);
